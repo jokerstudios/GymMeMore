@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GymMeMore</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="train">WORKOUT</string>
+    <string name="create">CREATE</string>
+    <string name="manage">PLANS</string>
+    <string name="camera">Camera</string>
+    <string name="kg">kg</string>
+
+    <string name="facebook_app_id">536544286516606</string>
+
+</resources>

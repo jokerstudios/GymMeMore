@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_action_switch_camera"
+        android:id="@+id/flipCamera"
+        android:textColor="#FFFFFF"
+        android:background="@null"
+        android:layout_margin="10dp"/>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_action_flash_off"
+        android:id="@+id/flash"
+        android:textColor="#FFFFFF"
+        android:background="@null"
+        android:layout_alignTop="@+id/flipCamera"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_action_refresh"
+            android:id="@+id/againBtn"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/round_button"
+            android:layout_margin="10dp"
+            android:visibility="gone"/>
+
+
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_action_photo"
+            android:id="@+id/captureImage"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/round_button"
+            android:layout_margin="10dp"/>
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_action_done"
+            android:id="@+id/startBattleBtn"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/round_button"
+            android:onClick="startBattle"
+            android:layout_margin="10dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
