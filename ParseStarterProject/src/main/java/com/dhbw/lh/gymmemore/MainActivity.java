@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.dhbw.lh.Controler.TrainingsplanActivity;
 
@@ -23,21 +24,27 @@ public class MainActivity extends AppCompatActivity {
     private Button createBtn;
     private ImageButton cameraBtn;
 
+    private Spinner dynamicSpinner;
+    Typeface font;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/minimal.otf");
+        font = Typeface.createFromAsset(this.getAssets(), "fonts/minimal.otf");
 
         trainBtn= (Button)findViewById(R.id.train);
         planBtn=(Button)findViewById(R.id.manage);
         createBtn=(Button)findViewById(R.id.create);
         cameraBtn=(ImageButton)findViewById(R.id.camera);
+        dynamicSpinner  = (Spinner) findViewById(R.id.dynamic_spinner);
 
         trainBtn.setTypeface(font);
         planBtn.setTypeface(font);
         createBtn.setTypeface(font);
+
 
         trainBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,11 +106,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void createDropdownMenue() {
-        Spinner dynamicSpinner = (Spinner) findViewById(R.id.dynamic_spinner);
+        //Spinner dynamicSpinner = (Spinner) findViewById(R.id.dynamic_spinner);
 
         String[] items = new String[] { "Plan 1", "Push Pull", "3er Split" };
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_layout, items);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_layout, items)
+        {
+            public View getView(int position, View convertView, android.view.ViewGroup parent) {
+                TextView v = (TextView) super.getView(position, convertView, parent);
+                v.setTypeface(font);
+                return v;
+            }
+
+
+        };
+
 
         adapter.setDropDownViewResource(R.layout.spinner_item_layout);
 
