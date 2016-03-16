@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="darkgrey">#6d6d6d</color>
+    <color name="darkred">#FF8B1500</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#791334</color>
+    <color name="grey">#ff454545</color>
+    <color name="background">#ff454545</color>
+    <color name="blue_light">#3faee5</color>
+    <color name="blue_dark">#297296</color>
+
+    <!--BUTTON-->
+    <color name="button_stroke">#ffffff</color>
+    <color name="start_color">#ff1fe58a</color>
+    <color name="end_color">#ff07a170</color>
+</resources>

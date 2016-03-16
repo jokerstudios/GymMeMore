@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/spinnerTarget"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11pt"
+        android:textColor="@drawable/selected_color_text"
+        android:drawSelectorOnTop="true"
+        android:background="@drawable/selected_color"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textIsSelectable="false"
+        android:gravity="center" />
+
+
+    <!--android:textColor="#FF8B1500"-->
