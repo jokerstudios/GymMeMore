@@ -103,7 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
         String[] items = new String[] { "Plan 1", "Push Pull", "3er Split" };
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_layout, items);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_layout, items);
+
+        adapter.setDropDownViewResource(R.layout.spinner_item_layout);
 
         dynamicSpinner.setAdapter(adapter);
 

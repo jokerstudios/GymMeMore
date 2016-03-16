@@ -2,9 +2,9 @@
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/spinnerTarget"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="30sp"
+    android:textSize="25sp"
     android:textColor="@color/white"
     android:drawSelectorOnTop="true"
     android:background="@null"
@@ -12,9 +12,8 @@
     android:paddingTop="4dp"
     android:textIsSelectable="false"
     android:gravity="center"
-    android:drawableRight="@drawable/ic_dd_arrow"
     android:paddingRight="20dp"
-    android:paddingLeft="40dp"/>
+    android:paddingLeft="20dp"/>
 
 
 
