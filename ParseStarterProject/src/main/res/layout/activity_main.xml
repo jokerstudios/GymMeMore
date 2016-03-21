@@ -17,10 +17,37 @@
         android:popupBackground="#99000000"
         android:layout_marginTop="20dp"/>
 
+    <!--IMAGE BUTTON-->
+    <ImageButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/camera"
+        android:src="@drawable/ic_action_photo"
+        android:background="@null"
+        android:layout_marginTop="100sp"
+        android:layout_gravity="center_horizontal|top"
+        android:contentDescription="@string/camera"
+        android:visibility="invisible"/>
+
+    <!--LOGO-->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/imagehelmzwtranso"
+        android:layout_below="@+id/dynamic_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+
     <!--BUTTONS-->
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="77dp">
 
         <Button
             android:textSize="30sp"
@@ -30,10 +57,10 @@
             android:id="@+id/train"
             android:background="@drawable/button"
             android:textColor="#ffffff"
-            android:layout_marginTop="60dp"
             android:layout_gravity="center"
             android:drawableLeft="@drawable/ic_people"
-            android:paddingLeft="10dp"/>
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"/>
 
         <Button
             android:textSize="30sp"
@@ -43,10 +70,10 @@
             android:id="@+id/manage"
             android:background="@drawable/button"
             android:textColor="#ffffff"
-            android:layout_marginTop="115dp"
             android:layout_gravity="center"
             android:drawableLeft="@drawable/ic_sheet"
-            android:paddingLeft="10dp"/>
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"/>
 
         <Button
             android:textSize="30sp"
@@ -59,23 +86,8 @@
             android:layout_gravity="center"
             android:drawableLeft="@drawable/ic_sign"
             android:paddingLeft="10dp"
-            android:layout_marginTop="170dp"/>
+            android:layout_marginTop="10dp"/>
 
-
-        <!--IMAGE BUTTON-->
-        <ImageButton
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/camera"
-            android:src="@drawable/ic_action_photo"
-            android:background="@null"
-            android:layout_marginTop="100sp"
-            android:layout_gravity="center_horizontal|top"
-            android:contentDescription="@string/camera"
-            android:visibility="invisible"/>
-
-
-
-    </FrameLayout>
+    </LinearLayout>
 
 </RelativeLayout>
