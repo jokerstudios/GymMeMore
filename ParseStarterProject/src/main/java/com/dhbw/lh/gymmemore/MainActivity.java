@@ -1,10 +1,12 @@
 package com.dhbw.lh.gymmemore;
 
 import android.content.Intent;
+import android.graphics.Point;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -106,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void createDropdownMenue() {
-        //Spinner dynamicSpinner = (Spinner) findViewById(R.id.dynamic_spinner);
 
         String[] items = new String[] { "Plan 1", "Push Pull", "3er Split" };
 
@@ -123,6 +124,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         adapter.setDropDownViewResource(R.layout.spinner_item_layout);
+        int offset = getDisplayHeight() / 25;
+        dynamicSpinner.setDropDownVerticalOffset(offset);
+
 
         dynamicSpinner.setAdapter(adapter);
 
@@ -137,6 +141,14 @@ public class MainActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
             }
         });
+    }
+
+    private int getDisplayHeight(){
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+
+        return size.y;
     }
 
 }
