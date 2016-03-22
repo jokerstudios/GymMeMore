@@ -122,11 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
         };
 
-
         adapter.setDropDownViewResource(R.layout.spinner_item_layout);
-        int offset = getDisplayHeight() / 25;
-        dynamicSpinner.setDropDownVerticalOffset(offset);
-
 
         dynamicSpinner.setAdapter(adapter);
 
@@ -142,13 +138,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    private int getDisplayHeight(){
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-
-        return size.y;
-    }
-
 }
