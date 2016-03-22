@@ -42,7 +42,7 @@
             android:src="@drawable/ic_action_refresh"
             android:id="@+id/againBtn"
             android:textColor="#FFFFFF"
-            android:background="@drawable/round_button"
+            android:background="@drawable/shape_round_button"
             android:layout_margin="10dp"
             android:visibility="gone"/>
 
@@ -54,7 +54,7 @@
             android:src="@drawable/ic_action_photo"
             android:id="@+id/captureImage"
             android:textColor="#FFFFFF"
-            android:background="@drawable/round_button"
+            android:background="@drawable/shape_round_button"
             android:layout_margin="10dp"/>
 
         <ImageButton
@@ -63,7 +63,7 @@
             android:src="@drawable/ic_action_done"
             android:id="@+id/startBattleBtn"
             android:textColor="#FFFFFF"
-            android:background="@drawable/round_button"
+            android:background="@drawable/shape_round_button"
             android:onClick="startBattle"
             android:layout_margin="10dp"
             android:visibility="gone"/>

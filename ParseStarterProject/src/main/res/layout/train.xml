@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_dark_new">
+    android:background="@drawable/ic_background_weights">
 
     <TextView
         android:id="@+id/planTitleTxt"
@@ -43,7 +43,7 @@
             android:layout_marginTop="50dp"
             android:layout_marginLeft="60dp"
             android:clickable="false"
-            android:background="@drawable/button"
+            android:background="@drawable/shape_button"
             android:paddingBottom="20dp">
 
             <TextView
@@ -194,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:text="ADD SET"
                 android:layout_weight="1"
-                android:background="@drawable/button"
+                android:background="@drawable/shape_button"
                 android:drawableLeft="@drawable/ic_sign"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"/>
@@ -217,7 +217,7 @@
                 android:layout_height="wrap_content"
                 android:text="SKIP"
                 android:layout_weight="1"
-                android:background="@drawable/button"
+                android:background="@drawable/shape_button"
                 android:layout_marginRight="10dp"/>
 
             <Button
@@ -226,7 +226,7 @@
                 android:layout_height="wrap_content"
                 android:text="DONE"
                 android:layout_weight="1"
-                android:background="@drawable/button"/>
+                android:background="@drawable/shape_button"/>
         </LinearLayout>
 
     </RelativeLayout>

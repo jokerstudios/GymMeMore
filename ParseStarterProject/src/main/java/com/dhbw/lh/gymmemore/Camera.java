@@ -339,7 +339,7 @@ public class Camera extends Activity implements SurfaceHolder.Callback, View.OnC
         AlertDialog.Builder dialog = new AlertDialog.Builder(
                 new ContextThemeWrapper(context,
                         android.R.style.Theme_Holo_Light_Dialog));
-        dialog.setIcon(R.drawable.ic_launcher);
+        dialog.setIcon(R.drawable.logo_helmet_transparent);
         if (title != null)
             dialog.setTitle(title);
         else

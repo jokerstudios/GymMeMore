@@ -16,7 +16,7 @@
     <application
         android:name=".Starter"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_gladiator"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
