@@ -129,11 +129,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
 
-
         adapter.setDropDownViewResource(R.layout.spinner_item_layout);
+
         dynamicSpinner.setDropDownVerticalOffset(calculateSpinnerOffset());
-
-
         dynamicSpinner.setAdapter(adapter);
 
         dynamicSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -157,8 +155,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return 0;
         }
     }
-
-
 
 
     private void drawBackground(){
