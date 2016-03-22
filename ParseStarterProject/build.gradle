@@ -10,6 +10,13 @@ android {
     compileSdkVersion 22
     buildToolsVersion '22.0.1'
 
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
     buildTypes {
         release {
             minifyEnabled false
