@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_dark_new"
-    tools:context=".MainActivity">
+    android:background="@drawable/ic_background_weights"
+    tools:context=".MainActivity"
+    android:id="@+id/rll_main">
 
     <!--DROPDOWN-->
     <Spinner
@@ -56,7 +57,7 @@
             android:layout_height="wrap_content"
             android:text="@string/manage"
             android:id="@+id/manage"
-            android:background="@drawable/button"
+            android:background="@drawable/shape_button"
             android:textColor="#ffffff"
             android:layout_gravity="center"
             android:drawableLeft="@drawable/ic_sheet"
@@ -69,7 +70,7 @@
             android:layout_height="wrap_content"
             android:text="@string/create"
             android:id="@+id/create"
-            android:background="@drawable/button"
+            android:background="@drawable/shape_button"
             android:textColor="#ffffff"
             android:layout_gravity="center"
             android:drawableLeft="@drawable/ic_sign"
@@ -82,7 +83,7 @@
             android:layout_height="wrap_content"
             android:text="@string/statistics"
             android:id="@+id/statistics"
-            android:background="@drawable/button"
+            android:background="@drawable/shape_button"
             android:textColor="#ffffff"
             android:layout_gravity="center"
             android:drawableLeft="@drawable/ic_graph"

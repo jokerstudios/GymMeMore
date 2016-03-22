@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/background">
+    android:background="@drawable/ic_background_weights">
 
     <ImageView
-        android:src="@drawable/image1"
+        android:src="@drawable/logo_helmet_transparent"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:scaleType="fitXY"

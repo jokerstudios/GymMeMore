@@ -3,23 +3,22 @@ package com.dhbw.lh.gymmemore;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.Typeface;
-import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Display;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.dhbw.lh.Controler.ImageHelper;
 import com.dhbw.lh.Controler.TrainingsplanActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -35,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Typeface font;
 
     int height;
+    private RelativeLayout rll;
+    private boolean backgroundChange = false;
+    ImageHelper imageHelper;
     //endregion
 
     @Override
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cameraBtn=(ImageButton)findViewById(R.id.camera);
         trainBtn = (ImageView) findViewById(R.id.train);
         dynamicSpinner  = (Spinner) findViewById(R.id.dynamic_spinner);
+        rll = (RelativeLayout) findViewById(R.id.rll_main);
 
         /*Font for the buttons and spinner*/
         font = Typeface.createFromAsset(this.getAssets(), "fonts/minimal.otf");
@@ -63,7 +66,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         createBtn.setOnClickListener(this);
         cameraBtn.setOnClickListener(this);
         trainBtn.setOnClickListener(this);
+        rll.setOnClickListener(this);
         //endregion
+
+        imageHelper = new ImageHelper();
+        drawBackground();
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -95,6 +102,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.statistics:
 
+                break;
+            case R.id.rll_main:
+                if(imageHelper.getCurrentBackgroundID(this)==6){
+                    imageHelper.setCurrentBackgroundID(0,this);
+                }else{
+                    imageHelper.setCurrentBackgroundID(imageHelper.getCurrentBackgroundID(this)+1,this);
+                }
+                drawBackground();
                 break;
             default:
                 break;
@@ -138,6 +153,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return 8*(height/100);
         }else{
             return 0;
+        }
+    }
+
+
+    private void drawBackground(){
+        switch(imageHelper.getCurrentBackgroundID(this)) {
+            case 0:
+                rll.setBackground(getResources().getDrawable(R.drawable.ic_background_weights));
+                break;
+            case 1:
+                rll.setBackground(getResources().getDrawable(R.drawable.ic_background_squat));
+                break;
+            case 2:
+                rll.setBackground(getResources().getDrawable(R.drawable.ic_background_seat));
+                break;
+            case 3:
+                rll.setBackground(getResources().getDrawable(R.drawable.ic_background_standing));
+                break;
+            case 4:
+                rll.setBackground(getResources().getDrawable(R.drawable.ic_background_bed));
+                break;
+            case 5:
+                rll.setBackground(getResources().getDrawable(R.drawable.ic_background_bridge));
+                break;
+            case 6:
+                rll.setBackground(getResources().getDrawable(R.drawable.ic_background_fitness));
+                break;
+            default:
+                break;
         }
     }
 }
