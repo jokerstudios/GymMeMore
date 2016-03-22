@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_background_blurred_dark"
+    android:background="@drawable/ic_dark_new"
     tools:context=".MainActivity">
 
     <!--DROPDOWN-->
@@ -30,12 +30,14 @@
 
     <!--LOGO-->
     <ImageView
+        android:id="@+id/train"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/imagehelmzwtranso"
+        android:background="@drawable/shape_logo"
         android:layout_below="@+id/dynamic_spinner"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:clickable="true"/>
 
 
     <!--BUTTONS-->
@@ -47,19 +49,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="77dp">
-
-        <Button
-            android:textSize="30sp"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/train"
-            android:id="@+id/train"
-            android:background="@drawable/button"
-            android:textColor="#ffffff"
-            android:layout_gravity="center"
-            android:drawableLeft="@drawable/ic_people"
-            android:paddingLeft="10dp"
-            android:layout_marginTop="10dp"/>
 
         <Button
             android:textSize="30sp"
@@ -84,6 +73,19 @@
             android:textColor="#ffffff"
             android:layout_gravity="center"
             android:drawableLeft="@drawable/ic_sign"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:textSize="30sp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="@string/statistics"
+            android:id="@+id/statistics"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_graph"
             android:paddingLeft="10dp"
             android:layout_marginTop="10dp"/>
 
