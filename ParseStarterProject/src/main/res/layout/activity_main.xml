@@ -10,8 +10,7 @@
         android:id="@+id/dynamic_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:dropDownVerticalOffset="10dp"
+
         android:dropDownWidth="match_parent"
         android:background="@null"
         android:popupBackground="#99000000"
