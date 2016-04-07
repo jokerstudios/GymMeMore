@@ -91,7 +91,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.create:
                 //intent = new Intent(MainActivity.this, Uebung.class);
                 //startActivity(intent);
-                break;
+                /*LineGraph line = new LineGraph();
+                Intent lineIntent = new Intent(MainActivity.this, GraphActivity.class);
+                startActivity(lineIntent);
+                break;*/
             case R.id.camera:
                 intent = new Intent(MainActivity.this, Camera.class);
                 startActivity(intent);
